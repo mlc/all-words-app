@@ -1,15 +1,46 @@
-import { ZoneId, ZonedDateTime, DateTimeFormatter } from '@js-joda/core';
+// this is all so bad but js-joda is so big
 
-const ymFormat = DateTimeFormatter.ofPattern('yyyy-MM');
-const startDate = ZonedDateTime.parse('2018-08-13T00:00Z');
+type Month = [number, number];
+
+const startDate: Month = [2018, 8];
+
+const addMonth = ([y, m]: Month): Month => (m === 12 ? [y + 1, 1] : [y, m + 1]);
+
+const fmt = ([y, m]: Month): string => `${y}-${m >= 10 ? '' : '0'}${m}`;
+
+const check = (elts: number[]): elts is Month =>
+  elts.length === 2 &&
+  Number.isInteger(elts[0]) &&
+  Number.isInteger(elts[1]) &&
+  elts[1] >= 1 &&
+  elts[1] <= 12;
+
+const isoToMonth = (iso: string): Month => {
+  const result = iso.substring(0, 7).split('-').map(Number);
+  if (check(result)) {
+    return result;
+  } else {
+    throw new Error('bad iso');
+  }
+};
+
+const lt = (a: Month, b: Month): boolean => {
+  if (a[0] < b[0]) {
+    return true;
+  } else if (a[0] > b[0]) {
+    return false;
+  } else {
+    return a[1] <= b[1];
+  }
+};
 
 export const validMonths = (): string[] => {
-  const end = ymFormat.format(ZonedDateTime.now(ZoneId.UTC));
+  const end = isoToMonth(new Date().toISOString());
   const result: string[] = [];
   let now = startDate;
   do {
-    result.unshift(ymFormat.format(now));
-    now = now.plusMonths(1);
-  } while (result[0] <= end);
+    result.unshift(fmt(now));
+    now = addMonth(now);
+  } while (lt(now, end));
   return result;
 };
