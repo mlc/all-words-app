@@ -1,4 +1,4 @@
-import { Component, h } from 'preact';
+import { Component, h, FunctionComponent } from 'preact';
 import { PostData } from './api';
 import Post from './Post';
 
@@ -11,6 +11,10 @@ interface State {
   toots?: PostData[];
   tootSource?: string;
 }
+
+const Loading: FunctionComponent = ({ children }) => (
+  <p id="loading">{children}</p>
+);
 
 class PostList extends Component<Props, State> {
   componentDidMount() {
@@ -52,9 +56,9 @@ class PostList extends Component<Props, State> {
     const { toots, tootSource, error } = this.state;
 
     if (error) {
-      return <p id="loading">Oh no! It didn’t work!</p>;
+      return <Loading>Oh no! It didn’t work!</Loading>;
     } else if (!toots || toots.length === 0 || tootSource !== source) {
-      return <p id="loading">Loading…</p>;
+      return <Loading>Loading…</Loading>;
     } else {
       return (
         <ul>

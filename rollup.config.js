@@ -1,5 +1,6 @@
 import autoprefixer from 'autoprefixer';
 import babel from '@rollup/plugin-babel';
+import commonjs from '@rollup/plugin-commonjs';
 import cssnano from 'cssnano';
 import emitEJS from 'rollup-plugin-emit-ejs';
 import htmlMinifier from 'rollup-plugin-html-minifier';
@@ -8,10 +9,11 @@ import postcss from 'rollup-plugin-postcss';
 import serve from 'rollup-plugin-serve';
 import sizes from 'rollup-plugin-sizes';
 import { terser } from 'rollup-plugin-terser';
+import postcssEnv from 'postcss-preset-env';
 
 const DEV = 'DEV' in process.env;
 
-const postCssPlugins = [autoprefixer];
+const postCssPlugins = [autoprefixer, postcssEnv];
 
 if (!DEV) {
   postCssPlugins.push(cssnano({ preset: 'default' }));
@@ -19,6 +21,7 @@ if (!DEV) {
 
 const plugins = [
   nodeResolve({ extensions: ['.js', '.ts', '.tsx'] }),
+  commonjs(),
   babel({
     extensions: ['.js', '.jsx', '.ts', 'tsx'],
     babelHelpers: 'runtime',
