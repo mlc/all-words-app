@@ -42,3 +42,8 @@ ul li {
 .dat {
   font-size: 14px;
 }
+select,
+option {
+  font-family: 'Archivo Narrow', sans-serif;
+  font-size: 16px;
+}
