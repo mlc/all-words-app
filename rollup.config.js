@@ -1,9 +1,21 @@
+import autoprefixer from 'autoprefixer';
 import babel from '@rollup/plugin-babel';
-import html from '@rollup/plugin-html';
+import cssnano from 'cssnano';
+import emitEJS from 'rollup-plugin-emit-ejs';
+import htmlMinifier from 'rollup-plugin-html-minifier';
 import nodeResolve from '@rollup/plugin-node-resolve';
+import postcss from 'rollup-plugin-postcss';
 import serve from 'rollup-plugin-serve';
+import sizes from 'rollup-plugin-sizes';
+import { terser } from 'rollup-plugin-terser';
 
 const DEV = 'DEV' in process.env;
+
+const postCssPlugins = [autoprefixer];
+
+if (!DEV) {
+  postCssPlugins.push(cssnano({ preset: 'default' }));
+}
 
 const plugins = [
   nodeResolve({ extensions: ['.js', '.ts', '.tsx'] }),
@@ -11,14 +23,9 @@ const plugins = [
     extensions: ['.js', '.jsx', '.ts', 'tsx'],
     babelHelpers: 'runtime',
   }),
-  html({
-    attributes: { html: { lang: 'en-US' } },
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-    ],
-    title: 'all valid wor(l)ds',
-  }),
+  postcss({ extract: true, plugins: postCssPlugins }),
+  emitEJS({ src: 'src' }),
+  sizes(),
 ];
 
 if (DEV) {
@@ -28,13 +35,15 @@ if (DEV) {
       open: true,
     })
   );
+} else {
+  plugins.push(htmlMinifier({ collapseWhitespace: true }), terser());
 }
 
 export default {
   input: 'src/index.tsx',
   output: {
     dir: 'dist',
-    format: 'iife',
+    format: 'esm',
     sourcemap: DEV ? 'inline' : true,
     entryFileNames: '[name].[hash].js',
   },
