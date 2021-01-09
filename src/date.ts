@@ -1,12 +1,16 @@
 // this is all so bad but js-joda is so big
 
-type Month = [number, number];
+export type Month = [number, number];
 
 const startDate: Month = [2018, 8];
 
-const addMonth = ([y, m]: Month): Month => (m === 12 ? [y + 1, 1] : [y, m + 1]);
+export const addMonth = ([y, m]: Month): Month =>
+  m === 12 ? [y + 1, 1] : [y, m + 1];
 
-const fmt = ([y, m]: Month): string => `${y}-${m >= 10 ? '' : '0'}${m}`;
+export const subtractMonth = ([y, m]: Month): Month =>
+  m === 1 ? [y - 1, 12] : [y, m - 1];
+
+export const fmt = ([y, m]: Month): string => `${y}-${m >= 10 ? '' : '0'}${m}`;
 
 const check = (elts: number[]): elts is Month =>
   elts.length === 2 &&
@@ -15,7 +19,7 @@ const check = (elts: number[]): elts is Month =>
   elts[1] >= 1 &&
   elts[1] <= 12;
 
-const isoToMonth = (iso: string): Month => {
+export const isoToMonth = (iso: string): Month => {
   const result = iso.substring(0, 7).split('-').map(Number);
   if (check(result)) {
     return result;

@@ -32,7 +32,7 @@ body {
   padding: 20px 40px;
   max-width: 400px;
 }
-a {
+a:any-link {
   color: inherit;
   text-decoration: underline;
 }
@@ -54,4 +54,13 @@ option {
   font-weight: var(--main-font-weight);
   font-family: var(--main-font);
   font-size: var(--body-text-size);
+}
+a.action {
+  margin-left: 1em;
+  cursor: pointer;
+  text-decoration: underline;
+}
+a.action.disabled {
+  color: gray(50);
+  cursor: inherit;
 }
