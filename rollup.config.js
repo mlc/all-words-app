@@ -16,7 +16,7 @@ const DEV = 'DEV' in process.env;
 const postCssPlugins = [autoprefixer, postcssEnv];
 
 if (!DEV) {
-  postCssPlugins.push(cssnano({ preset: 'default' }));
+  postCssPlugins.push(cssnano({ preset: ['default', { mergeRules: false }] }));
 }
 
 const plugins = [
