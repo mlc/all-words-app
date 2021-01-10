@@ -6,7 +6,7 @@ interface Props {
 }
 
 const author = (name?: string[]): string | null => {
-  if (name?.length > 0) {
+  if (name && name.length > 0) {
     return ` by ${name.join(', ')}`;
   } else {
     return null;
@@ -21,7 +21,7 @@ const Title: FunctionComponent<{ post: PostData }> = ({
 
 const Post: FunctionComponent<Props> = ({ post }) => (
   <li lang={post.lang}>
-    “<a href={post.url}>{post.post}</a>”
+    “<a href={post.url ?? undefined}>{post.post}</a>”
     <br />
     <span className="dat">
       {'from '}

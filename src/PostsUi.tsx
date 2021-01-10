@@ -1,4 +1,4 @@
-import classnames from 'classnames';
+import clsx from 'clsx';
 import { FunctionComponent, h, Fragment, JSX } from 'preact';
 import { useCallback, useMemo, useState } from 'preact/hooks';
 import {
@@ -26,7 +26,7 @@ const NavElement: FunctionComponent<NavElementProps> = ({
 }) => (
   <button
     type="button"
-    className={classnames('action', { disabled })}
+    className={clsx('action', { disabled })}
     onClick={onClick}
     aria-disabled={disabled}
   >
@@ -37,9 +37,9 @@ const NavElement: FunctionComponent<NavElementProps> = ({
 const PostsUi: FunctionComponent = () => {
   const months = useMemo(validMonths, []);
   const [currentSelection, setCurrentSelection] = useState<string>(months[0]);
-  const onChange = useCallback(
+  const onChange: JSX.GenericEventHandler<HTMLSelectElement> = useCallback(
     ({ target }) => {
-      const value = target?.value;
+      const value = (target as HTMLSelectElement | null)?.value;
       if (value) {
         setCurrentSelection(value);
       }

@@ -7,7 +7,7 @@ interface Props {
 }
 
 interface State {
-  error?: Error;
+  error?: Error | null;
   toots?: PostData[];
   tootSource?: string;
 }
