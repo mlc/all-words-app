@@ -47,6 +47,7 @@ class PostList extends Component<Props, State> {
       })
       .catch((error) => {
         this.setState({ error });
+        // eslint-disable-next-line no-console
         console.error(error);
       });
   };

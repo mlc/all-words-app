@@ -5,9 +5,9 @@ interface Props {
   post: PostData;
 }
 
-const author = (author?: string[]): string | null => {
-  if (author?.length > 0) {
-    return ` by ${author.join(', ')}`;
+const author = (name?: string[]): string | null => {
+  if (name?.length > 0) {
+    return ` by ${name.join(', ')}`;
   } else {
     return null;
   }
@@ -23,7 +23,7 @@ const Post: FunctionComponent<Props> = ({ post }) => (
   <li lang={post.lang}>
     “<a href={post.url}>{post.post}</a>”
     <br />
-    <span class="dat">
+    <span className="dat">
       {'from '}
       <Title post={post} />
       {author(post.author)}

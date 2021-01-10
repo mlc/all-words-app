@@ -1,5 +1,5 @@
 import classnames from 'classnames';
-import { FunctionComponent, h, Fragment } from 'preact';
+import { FunctionComponent, h, Fragment, JSX } from 'preact';
 import { useCallback, useMemo, useState } from 'preact/hooks';
 import {
   addMonth,
@@ -13,6 +13,25 @@ import PostList from './PostList';
 
 const monthOp = (op: (month: Month) => Month, str: string): string =>
   fmtMonth(op(isoToMonth(str)));
+
+interface NavElementProps {
+  onClick: JSX.MouseEventHandler<HTMLButtonElement>;
+  disabled?: boolean;
+}
+
+const NavElement: FunctionComponent<NavElementProps> = ({
+  onClick,
+  disabled = false,
+  children,
+}) => (
+  <button
+    type="button"
+    className={classnames('action', { disabled })}
+    onClick={onClick}
+  >
+    {children}
+  </button>
+);
 
 const PostsUi: FunctionComponent = () => {
   const months = useMemo(validMonths, []);
@@ -43,7 +62,7 @@ const PostsUi: FunctionComponent = () => {
   return (
     <>
       <p>
-        <label for="month-selector">{'month: '}</label>
+        <label htmlFor="month-selector">{'month: '}</label>
         <select id="month-selector" onChange={onChange}>
           {months.map((month) => (
             <option
@@ -55,12 +74,12 @@ const PostsUi: FunctionComponent = () => {
             </option>
           ))}
         </select>
-        <a class={classnames('action', { disabled: onFirst })} onClick={prev}>
+        <NavElement onClick={prev} disabled={onFirst}>
           « back
-        </a>
-        <a class={classnames('action', { disabled: onLast })} onClick={next}>
+        </NavElement>
+        <NavElement onClick={next} disabled={onLast}>
           forwards »
-        </a>
+        </NavElement>
       </p>
       <PostList source={`posts/${currentSelection}.json`} />
     </>

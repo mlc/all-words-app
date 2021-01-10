@@ -50,17 +50,22 @@ ul li {
   font-size: 14px;
 }
 select,
-option {
+option,
+button {
   font-weight: var(--main-font-weight);
   font-family: var(--main-font);
   font-size: var(--body-text-size);
 }
-a.action {
+button.action {
   margin-left: 1em;
   cursor: pointer;
   text-decoration: underline;
+  padding: 0;
+  background: none;
+  border: none;
+  color: var(--main-color);
 }
-a.action.disabled {
+button.action.disabled {
   color: gray(50);
   cursor: inherit;
 }
