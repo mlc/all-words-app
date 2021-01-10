@@ -28,6 +28,7 @@ const NavElement: FunctionComponent<NavElementProps> = ({
     type="button"
     className={classnames('action', { disabled })}
     onClick={onClick}
+    aria-disabled={disabled}
   >
     {children}
   </button>
