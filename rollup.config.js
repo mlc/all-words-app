@@ -12,7 +12,7 @@ import { terser } from 'rollup-plugin-terser';
 import postcssEnv from 'postcss-preset-env';
 
 const DEV = 'DEV' in process.env;
-
+const extensions = ['.js', '.jsx', '.ts', '.tsx'];
 const postCssPlugins = [autoprefixer, postcssEnv];
 
 if (!DEV) {
@@ -20,10 +20,10 @@ if (!DEV) {
 }
 
 const plugins = [
-  nodeResolve({ extensions: ['.js', '.ts', '.tsx'] }),
+  nodeResolve({ extensions }),
   commonjs(),
   babel({
-    extensions: ['.js', '.jsx', '.ts', 'tsx'],
+    extensions,
     babelHelpers: 'runtime',
   }),
   postcss({ extract: true, plugins: postCssPlugins }),
