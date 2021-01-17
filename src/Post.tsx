@@ -20,10 +20,11 @@ const Title: FunctionComponent<{ post: PostData }> = ({
 );
 
 const Post: FunctionComponent<Props> = ({ post }) => (
-  <li lang={post.lang}>
-    “<a href={post.url ?? undefined}>{post.post}</a>”
-    <br />
-    <span className="dat">
+  <li className="post" lang={post.lang}>
+    <q>
+      <a href={post.url ?? undefined}>{post.post}</a>
+    </q>
+    <span>
       {'from '}
       <Title post={post} />
       {author(post.author)}

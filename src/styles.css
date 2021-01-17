@@ -18,8 +18,7 @@ b,
 strong {
   font-weight: var(--heavy-font-weight);
 }
-p,
-li {
+p {
   font-size: var(--body-text-size);
 }
 h1 {
@@ -43,10 +42,17 @@ ul {
   list-style: none;
   padding: 0px;
 }
-ul li {
+li.post {
+  display: flex;
+  flex-direction: column;
   padding-bottom: 12px;
+  align-items: stretch;
 }
-.dat {
+li.post q {
+  font-size: var(--body-text-size);
+  padding-bottom: 2px;
+}
+li.post span {
   font-size: 14px;
 }
 select,
