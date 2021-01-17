@@ -13,6 +13,14 @@ const author = (name?: string[]): string | null => {
   }
 };
 
+const Quote: FunctionComponent<{ post: PostData }> = ({
+  post: { url, post },
+}) => (
+  <q>
+    <a href={url ?? undefined}>{post}</a>
+  </q>
+);
+
 const Title: FunctionComponent<{ post: PostData }> = ({
   post: { book, bookId },
 }) => (
@@ -21,9 +29,7 @@ const Title: FunctionComponent<{ post: PostData }> = ({
 
 const Post: FunctionComponent<Props> = ({ post }) => (
   <li className="post" lang={post.lang}>
-    <q>
-      <a href={post.url ?? undefined}>{post.post}</a>
-    </q>
+    <Quote post={post} />
     <span>
       {'from '}
       <Title post={post} />

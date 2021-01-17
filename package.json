@@ -30,6 +30,7 @@
     "eslint": "^7.18.0",
     "eslint-config-airbnb-typescript": "^12.0.0",
     "eslint-config-prettier": "^7.1.0",
+    "eslint-plugin-compat": "^3.9.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-prettier": "^3.3.1",
@@ -61,6 +62,7 @@
   "browserslist": [
     "cover 90% in US",
     "not IE 11",
-    "not dead"
+    "not dead",
+    "firefox ESR"
   ]
 }

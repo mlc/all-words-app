@@ -4,6 +4,7 @@
   --heavy-font-weight: 600;
   --main-color: gray(6);
   --body-text-size: 16px;
+  --small-text-size: 14px;
 }
 body,
 html {
@@ -53,7 +54,7 @@ li.post q {
   padding-bottom: 2px;
 }
 li.post span {
-  font-size: 14px;
+  font-size: var(--small-text-size);
 }
 select,
 option {

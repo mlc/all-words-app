@@ -7,8 +7,8 @@ interface Props {
 }
 
 interface State {
-  error?: Error | null;
-  toots?: PostData[];
+  error: Error | null;
+  toots: PostData[];
   tootSource?: string;
 }
 
@@ -17,6 +17,11 @@ const Loading: FunctionComponent = ({ children }) => (
 );
 
 class PostList extends Component<Props, State> {
+  constructor(props?: Props) {
+    super(props);
+    this.state = { error: null, toots: [] };
+  }
+
   componentDidMount() {
     const { source } = this.props;
     this.doFetch(source);
@@ -58,7 +63,7 @@ class PostList extends Component<Props, State> {
 
     if (error) {
       return <Loading>Oh no! It didn’t work!</Loading>;
-    } else if (!toots || toots.length === 0 || tootSource !== source) {
+    } else if (toots.length === 0 || tootSource !== source) {
       return <Loading>Loading…</Loading>;
     } else {
       return (
