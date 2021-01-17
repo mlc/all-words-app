@@ -6,7 +6,8 @@
   "license": "MIT",
   "scripts": {
     "build": "rollup --config",
-    "dev": "rollup --config --environment DEV --watch --watch.buildDelay 2"
+    "dev": "rollup --config --environment DEV --watch --watch.buildDelay 2",
+    "lint": "eslint src && tsc"
   },
   "dependencies": {
     "@babel/runtime": "^7.12.5",
