@@ -1,6 +1,6 @@
 // this is all so bad but js-joda is so big
 
-export type Month = [number, number];
+export type Month = readonly [number, number];
 
 const startDate: Month = [2018, 8];
 
@@ -12,7 +12,7 @@ export const subtractMonth = ([y, m]: Month): Month =>
 
 export const fmt = ([y, m]: Month): string => `${y}-${m >= 10 ? '' : '0'}${m}`;
 
-const check = (elts: number[]): elts is Month =>
+const check = (elts: readonly number[]): elts is Month =>
   elts.length === 2 &&
   Number.isInteger(elts[0]) &&
   Number.isInteger(elts[1]) &&
