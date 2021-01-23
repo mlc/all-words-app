@@ -15,7 +15,7 @@ module.exports = {
   ],
   env: { browser: true },
   parserOptions: {
-    project: './tsconfig.json',
+    project: './tsconfig.lint.json',
   },
   rules: {
     'no-else-return': 'off',
