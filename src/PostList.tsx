@@ -67,11 +67,13 @@ class PostList extends Component<Props, State> {
       return <Loading>Loading…</Loading>;
     } else {
       return (
-        <ul>
-          {toots.map((post) => (
-            <Post post={post} key={post.url} />
-          ))}
-        </ul>
+        <main>
+          <ul>
+            {toots.map((post) => (
+              <Post post={post} key={post.url} />
+            ))}
+          </ul>
+        </main>
       );
     }
   }

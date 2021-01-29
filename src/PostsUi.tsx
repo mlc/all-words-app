@@ -62,7 +62,7 @@ const PostsUi: FunctionComponent = () => {
 
   return (
     <>
-      <p>
+      <nav>
         <label htmlFor="month-selector">{'month: '}</label>
         <select id="month-selector" onChange={onChange}>
           {months.map((month) => (
@@ -81,7 +81,7 @@ const PostsUi: FunctionComponent = () => {
         <NavElement onClick={next} disabled={onLast}>
           forwards »
         </NavElement>
-      </p>
+      </nav>
       <PostList source={`posts/${currentSelection}.json`} />
     </>
   );

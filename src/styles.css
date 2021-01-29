@@ -13,6 +13,10 @@ html {
   font-weight: var(--main-font-weight);
   font-family: var(--main-font);
 }
+body {
+  padding: 20px 40px;
+  max-width: 400px;
+}
 h1,
 h2,
 b,
@@ -27,17 +31,14 @@ h1 {
 }
 h2 {
   font-size: 20px;
-}
-body {
-  padding: 20px 40px;
-  max-width: 400px;
+  margin-top: 0;
 }
 a:any-link {
   color: inherit;
   text-decoration: underline;
 }
-h2 {
-  padding-top: 40px;
+header {
+  padding-bottom: 40px;
 }
 ul {
   list-style: none;
@@ -53,7 +54,7 @@ li.post q {
   font-size: var(--body-text-size);
   padding-bottom: 2px;
 }
-li.post span {
+li.post .info {
   font-size: var(--small-text-size);
 }
 select,

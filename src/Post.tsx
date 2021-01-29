@@ -30,11 +30,11 @@ const Title: FunctionComponent<{ post: PostData }> = ({
 const Post: FunctionComponent<Props> = ({ post }) => (
   <li className="post" lang={post.lang}>
     <Quote post={post} />
-    <span>
+    <div className="info">
       {'from '}
       <Title post={post} />
       {author(post.author)}
-    </span>
+    </div>
   </li>
 );
 
