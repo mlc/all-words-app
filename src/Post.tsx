@@ -1,5 +1,6 @@
 import { FunctionComponent, h } from 'preact';
 import { PostData } from './api';
+import styles from './styles.css';
 
 interface Props {
   post: PostData;
@@ -28,9 +29,9 @@ const Title: FunctionComponent<{ post: PostData }> = ({
 );
 
 const Post: FunctionComponent<Props> = ({ post }) => (
-  <li className="post" lang={post.lang}>
+  <li className={styles.post} lang={post.lang}>
     <Quote post={post} />
-    <div className="info">
+    <div className={styles.info}>
       {'from '}
       <Title post={post} />
       {author(post.author)}

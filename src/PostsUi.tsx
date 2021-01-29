@@ -10,6 +10,7 @@ import {
   validMonths,
 } from './date';
 import PostList from './PostList';
+import styles from './styles.css';
 
 const monthOp = (op: (month: Month) => Month, str: string): string =>
   fmtMonth(op(isoToMonth(str)));
@@ -26,7 +27,7 @@ const NavElement: FunctionComponent<NavElementProps> = ({
 }) => (
   <button
     type="button"
-    className={clsx('action', { disabled })}
+    className={clsx(styles.action, { [styles.disabled]: disabled })}
     onClick={onClick}
     aria-disabled={disabled}
   >

@@ -77,3 +77,6 @@ button.action.disabled {
   color: gray(50);
   cursor: inherit;
 }
+#loading {
+  font-size: var(--body-text-size);
+}

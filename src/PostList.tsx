@@ -1,6 +1,7 @@
 import { Component, h, FunctionComponent } from 'preact';
 import { PostData } from './api';
 import Post from './Post';
+import styles from './styles.css';
 
 interface Props {
   source: string;
@@ -13,7 +14,7 @@ interface State {
 }
 
 const Loading: FunctionComponent = ({ children }) => (
-  <p id="loading">{children}</p>
+  <p id={styles.loading}>{children}</p>
 );
 
 class PostList extends Component<Props, State> {

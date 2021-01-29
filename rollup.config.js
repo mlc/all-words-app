@@ -26,7 +26,11 @@ const plugins = [
     extensions,
     babelHelpers: 'runtime',
   }),
-  postcss({ extract: true, plugins: postCssPlugins }),
+  postcss({
+    modules: true,
+    extract: true,
+    plugins: postCssPlugins,
+  }),
   emitEJS({ src: 'src' }),
   sizes(),
 ];
