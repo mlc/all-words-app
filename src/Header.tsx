@@ -16,7 +16,7 @@ const Header: FunctionComponent = () => (
       </a>
       {' • javascript on github: '}
       <a href="https://github.com/mlc/all-valid-words">bot</a>
-      {' ,'}
+      {', '}
       <a href="https://github.com/mlc/all-words-app">app</a>
     </p>
     <p>
