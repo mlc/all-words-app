@@ -63,6 +63,7 @@
     "cover 90% in US",
     "not IE 11",
     "not dead",
-    "firefox ESR"
+    "firefox ESR",
+    "not safari 8"
   ]
 }
