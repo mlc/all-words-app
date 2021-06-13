@@ -1,5 +1,5 @@
 import { FunctionComponent, h } from 'preact';
-import { PostData } from './api';
+import type { PostData } from './api';
 import styles from './styles.css';
 
 interface Props {
