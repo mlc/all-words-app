@@ -4458,10 +4458,10 @@ rollup-plugin-emit-ejs@^3.1.0:
     fast-glob "^3.2.2"
     fs-extra "^8.1.0"
 
-rollup-plugin-html-minifier@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/rollup-plugin-html-minifier/-/rollup-plugin-html-minifier-1.1.0.tgz#f986f19758aa84c0e7a8649d0e3e4e9bdab42c5e"
-  integrity sha512-1X9NUpjI/TU/D9BJK4fpjRKtqZRlgvS5Q4X3TuMQjc75hp1R+YC9QR2wytbCaoTVE0tSTtgR2jrkC2Me3mPYKA==
+rollup-plugin-html-minifier@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/rollup-plugin-html-minifier/-/rollup-plugin-html-minifier-1.2.0.tgz#2fa8de9c02652b3c34e639ab2bb99474dbcd337f"
+  integrity sha512-HtixLHaBUuTKqsKhWgq2xcmSn6Bx7XSNcnvrKw1LWJpA/moPFyPZF8SYuL5KGu1JHoAm+pScEoCr8VMtpey5hQ==
   dependencies:
     "@types/html-minifier" "^3.5.3"
     html-minifier "^4.0.0"
