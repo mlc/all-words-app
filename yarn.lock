@@ -1028,6 +1028,14 @@
     estree-walker "^1.0.1"
     picomatch "^2.2.2"
 
+"@rollup/pluginutils@^4.1.0":
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/@rollup/pluginutils/-/pluginutils-4.1.0.tgz#0dcc61c780e39257554feb7f77207dceca13c838"
+  integrity sha512-TrBhfJkFxA+ER+ew2U2/fHbebhLT/l/2pRk0hfj9KusXUuRXd2v0R58AfaZK9VXDQ4TogOSEmICVrQAA3zFnHQ==
+  dependencies:
+    estree-walker "^2.0.1"
+    picomatch "^2.2.2"
+
 "@types/clean-css@*":
   version "4.2.4"
   resolved "https://registry.yarnpkg.com/@types/clean-css/-/clean-css-4.2.4.tgz#4fe4705c384e6ec9ee8454bc3d49089f38dc038a"
@@ -4254,10 +4262,10 @@ prettier-linter-helpers@^1.0.0:
   dependencies:
     fast-diff "^1.1.2"
 
-prettier@^2.2.1:
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.3.1.tgz#76903c3f8c4449bc9ac597acefa24dc5ad4cbea6"
-  integrity sha512-p+vNbgpLjif/+D+DwAZAbndtRrR0md0MwfmOVN9N+2RgyACMT+7tfaRnT+WDPkqnuVwleyuBIG2XBxKDme3hPA==
+prettier@^2.3.2:
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.3.2.tgz#ef280a05ec253712e486233db5c6f23441e7342d"
+  integrity sha512-lnJzDfJ66zkMy58OL5/NY5zp70S7Nz6KqcKkXYzn2tMVrNxvbqaBpg7H3qHaLxCJ5lNMsGuM8+ohS7cZrthdLQ==
 
 progress@^2.0.0:
   version "2.0.3"
@@ -4464,11 +4472,12 @@ rollup-plugin-emit-ejs@^3.1.0:
     fast-glob "^3.2.2"
     fs-extra "^8.1.0"
 
-rollup-plugin-html-minifier@^1.1.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/rollup-plugin-html-minifier/-/rollup-plugin-html-minifier-1.2.0.tgz#2fa8de9c02652b3c34e639ab2bb99474dbcd337f"
-  integrity sha512-HtixLHaBUuTKqsKhWgq2xcmSn6Bx7XSNcnvrKw1LWJpA/moPFyPZF8SYuL5KGu1JHoAm+pScEoCr8VMtpey5hQ==
+rollup-plugin-html-minifier@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/rollup-plugin-html-minifier/-/rollup-plugin-html-minifier-2.0.0.tgz#3781c5d8f335b9fc0d8ec02af2e6827500b61d6d"
+  integrity sha512-Xx0Na4uF53jRQzvoiglszKZcyDGSna93r7s1/uqOO7ZSq7w7ITY7jn4DY6l2yZ2vpHizQscSt6xxiegl8cQmuw==
   dependencies:
+    "@rollup/pluginutils" "^4.1.0"
     "@types/html-minifier" "^3.5.3"
     html-minifier "^4.0.0"
 
