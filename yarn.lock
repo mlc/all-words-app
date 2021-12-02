@@ -1028,6 +1028,14 @@
     estree-walker "^1.0.1"
     picomatch "^2.2.2"
 
+"@rollup/pluginutils@^4.1.0":
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/@rollup/pluginutils/-/pluginutils-4.1.1.tgz#1d4da86dd4eded15656a57d933fda2b9a08d47ec"
+  integrity sha512-clDjivHqWGXi7u+0d2r2sBi4Ie6VLEAzWMIkvJLnDmxoOhBYOTfzGbOQBA32THHm11/LiJbd01tJUpJsbshSWQ==
+  dependencies:
+    estree-walker "^2.0.1"
+    picomatch "^2.2.2"
+
 "@types/clean-css@*":
   version "4.2.4"
   resolved "https://registry.yarnpkg.com/@types/clean-css/-/clean-css-4.2.4.tgz#4fe4705c384e6ec9ee8454bc3d49089f38dc038a"
@@ -4464,11 +4472,12 @@ rollup-plugin-emit-ejs@^3.1.0:
     fast-glob "^3.2.2"
     fs-extra "^8.1.0"
 
-rollup-plugin-html-minifier@^1.1.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/rollup-plugin-html-minifier/-/rollup-plugin-html-minifier-1.2.0.tgz#2fa8de9c02652b3c34e639ab2bb99474dbcd337f"
-  integrity sha512-HtixLHaBUuTKqsKhWgq2xcmSn6Bx7XSNcnvrKw1LWJpA/moPFyPZF8SYuL5KGu1JHoAm+pScEoCr8VMtpey5hQ==
+rollup-plugin-html-minifier@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/rollup-plugin-html-minifier/-/rollup-plugin-html-minifier-2.0.0.tgz#3781c5d8f335b9fc0d8ec02af2e6827500b61d6d"
+  integrity sha512-Xx0Na4uF53jRQzvoiglszKZcyDGSna93r7s1/uqOO7ZSq7w7ITY7jn4DY6l2yZ2vpHizQscSt6xxiegl8cQmuw==
   dependencies:
+    "@rollup/pluginutils" "^4.1.0"
     "@types/html-minifier" "^3.5.3"
     html-minifier "^4.0.0"
 
