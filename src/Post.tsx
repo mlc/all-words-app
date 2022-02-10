@@ -1,4 +1,4 @@
-import { FunctionComponent, h } from 'preact';
+import { Fragment, FunctionComponent, h } from 'preact';
 import type { PostData } from './api';
 import styles from './styles.css';
 
@@ -10,7 +10,8 @@ const Author: FunctionComponent<{ post: PostData }> = ({
   post: { author },
 }) => {
   if (author && author.length > 0) {
-    return <>` by ${author.join(', ')}`</>;
+    // eslint-disable-next-line react/jsx-no-useless-fragment
+    return <>{` by ${author.join(', ')}`}</>;
   } else {
     return null;
   }
