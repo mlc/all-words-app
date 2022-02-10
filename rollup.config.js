@@ -6,7 +6,6 @@ import emitEJS from 'rollup-plugin-emit-ejs';
 import htmlMinifier from 'rollup-plugin-html-minifier';
 import nodeResolve from '@rollup/plugin-node-resolve';
 import postcss from 'rollup-plugin-postcss';
-import serve from 'rollup-plugin-serve';
 import sizes from 'rollup-plugin-sizes';
 import { terser } from 'rollup-plugin-terser';
 import postcssEnv from 'postcss-preset-env';
@@ -35,14 +34,7 @@ const plugins = [
   sizes(),
 ];
 
-if (DEV) {
-  plugins.push(
-    serve({
-      contentBase: ['dist'],
-      open: true,
-    })
-  );
-} else {
+if (!DEV) {
   plugins.push(htmlMinifier({ collapseWhitespace: true }), terser());
 }
 
