@@ -6,9 +6,11 @@ interface Props {
   post: PostData;
 }
 
-const author = (name?: string[]): string | null => {
-  if (name && name.length > 0) {
-    return ` by ${name.join(', ')}`;
+const Author: FunctionComponent<{ post: PostData }> = ({
+  post: { author },
+}) => {
+  if (author && author.length > 0) {
+    return <>` by ${author.join(', ')}`</>;
   } else {
     return null;
   }
@@ -34,7 +36,7 @@ const Post: FunctionComponent<Props> = ({ post }) => (
     <div className={styles.info}>
       {'from '}
       <Title post={post} />
-      {author(post.author)}
+      <Author post={post} />
     </div>
   </li>
 );

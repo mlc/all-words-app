@@ -1,4 +1,3 @@
-import clsx from 'clsx';
 import { FunctionComponent, h, Fragment, JSX } from 'preact';
 import { useCallback, useMemo, useState } from 'preact/hooks';
 import {
@@ -9,31 +8,11 @@ import {
   subtractMonth,
   validMonths,
 } from './date';
+import NavElement from './NavElement';
 import PostList from './PostList';
-import styles from './styles.css';
 
 const monthOp = (op: (month: Month) => Month, str: string): string =>
   fmtMonth(op(isoToMonth(str)));
-
-interface NavElementProps {
-  onClick: JSX.MouseEventHandler<HTMLButtonElement>;
-  disabled?: boolean;
-}
-
-const NavElement: FunctionComponent<NavElementProps> = ({
-  onClick,
-  disabled = false,
-  children,
-}) => (
-  <button
-    type="button"
-    className={clsx(styles.action, { [styles.disabled]: disabled })}
-    onClick={onClick}
-    aria-disabled={disabled}
-  >
-    {children}
-  </button>
-);
 
 const PostsUi: FunctionComponent = () => {
   const months = useMemo(validMonths, []);

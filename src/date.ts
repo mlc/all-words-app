@@ -1,6 +1,6 @@
 // this is all so bad but js-joda is so big
 
-export type Month = readonly [number, number];
+export type Month = readonly [year: number, month: number];
 
 const startDate: Month = [2018, 8];
 
