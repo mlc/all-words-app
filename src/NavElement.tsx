@@ -1,4 +1,4 @@
-import { FunctionComponent, h, JSX } from 'preact';
+import type { FunctionComponent, JSX } from 'preact';
 import clsx from 'clsx';
 import styles from './styles.css';
 

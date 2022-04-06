@@ -1,10 +1,5 @@
 module.exports = {
   root: true,
-  settings: {
-    react: {
-      pragma: 'h',
-    },
-  },
   parser: '@typescript-eslint/parser',
   extends: [
     'airbnb',
@@ -27,5 +22,7 @@ module.exports = {
         unnamedComponents: 'arrow-function',
       },
     ],
+    'react/react-in-jsx-scope': 0,
+    'react/jsx-uses-react': 0,
   },
 };

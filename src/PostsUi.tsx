@@ -1,4 +1,4 @@
-import { FunctionComponent, h, Fragment, JSX } from 'preact';
+import type { FunctionComponent, JSX } from 'preact';
 import { useCallback, useMemo, useState } from 'preact/hooks';
 import {
   addMonth,

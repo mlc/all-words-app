@@ -1,4 +1,4 @@
-import { Component, h, FunctionComponent } from 'preact';
+import { Component, FunctionComponent } from 'preact';
 import type { PostData } from './api';
 import Post from './Post';
 import styles from './styles.css';

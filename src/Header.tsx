@@ -1,4 +1,4 @@
-import { FunctionComponent, h } from 'preact';
+import type { FunctionComponent } from 'preact';
 
 const Header: FunctionComponent = () => (
   <header>

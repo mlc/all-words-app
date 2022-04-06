@@ -1,4 +1,4 @@
-import { FunctionComponent, h, Fragment } from 'preact';
+import type { FunctionComponent } from 'preact';
 import Header from './Header';
 import PostsUi from './PostsUi';
 

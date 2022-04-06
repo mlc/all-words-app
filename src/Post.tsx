@@ -1,4 +1,4 @@
-import { Fragment, FunctionComponent, h } from 'preact';
+import type { FunctionComponent } from 'preact';
 import type { PostData } from './api';
 import styles from './styles.css';
 
