@@ -5,26 +5,20 @@
   "author": "mike castleman",
   "license": "MIT",
   "scripts": {
-    "build": "rollup --config",
-    "dev": "rollup --config --environment DEV --watch --watch.buildDelay 2",
-    "lint": "eslint src && tsc"
+    "build": "rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript",
+    "lint": "eslint src && tsc --noEmit"
   },
   "dependencies": {
-    "@babel/runtime": "7.17.8",
     "clsx": "1.1.1",
-    "preact": "10.6.6"
+    "preact": "10.6.6",
+    "tslib": "^2.3.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.17.8",
-    "@babel/plugin-transform-react-jsx": "^7.17.3",
-    "@babel/plugin-transform-runtime": "^7.17.0",
-    "@babel/preset-env": "^7.16.11",
-    "@babel/preset-typescript": "^7.16.7",
-    "@rollup/plugin-babel": "^5.3.1",
-    "@rollup/plugin-commonjs": "^21.0.2",
     "@rollup/plugin-node-resolve": "^13.1.3",
+    "@rollup/plugin-typescript": "^8.3.1",
+    "@types/postcss-preset-env": "^6.7.3",
     "@typescript-eslint/eslint-plugin": "5.15.0",
-    "@typescript-eslint/parser": "5.15.0",
+    "@typescript-eslint/parser": "5.18.0",
     "autoprefixer": "^10.4.2",
     "cssnano": "^5.1.4",
     "eslint": "^8.11.0",
@@ -46,9 +40,8 @@
     "rollup-plugin-emit-ejs": "^3.1.0",
     "rollup-plugin-html-minifier": "^2.0.0",
     "rollup-plugin-postcss": "^4.0.2",
-    "rollup-plugin-sizes": "^1.0.4",
     "rollup-plugin-terser": "^7.0.2",
-    "typescript": "^4.6.2"
+    "typescript": "^4.6.3"
   },
   "husky": {
     "hooks": {
