@@ -34,7 +34,7 @@
     "husky": "^4.3.8",
     "lint-staged": "^12.4.0",
     "postcss": "^8.4.12",
-    "postcss-preset-env": "^7.4.3",
+    "postcss-preset-env": "^7.5.0",
     "prettier": "^2.6.2",
     "rollup": "^2.70.2",
     "rollup-plugin-emit-ejs": "^3.1.0",
