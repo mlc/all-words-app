@@ -36,7 +36,7 @@
     "postcss": "^8.4.13",
     "postcss-preset-env": "^7.5.0",
     "prettier": "^2.6.2",
-    "rollup": "^2.72.0",
+    "rollup": "^2.73.0",
     "rollup-plugin-emit-ejs": "^3.1.0",
     "rollup-plugin-html-minifier": "^2.0.0",
     "rollup-plugin-postcss": "^4.0.2",
