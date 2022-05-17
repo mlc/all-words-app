@@ -2,7 +2,7 @@
   --main-font: 'Archivo Narrow', sans-serif;
   --main-font-weight: 400;
   --heavy-font-weight: 600;
-  --main-color: gray(6);
+  --main-color: #0d0d0d;
   --body-text-size: 16px;
   --small-text-size: 14px;
 }
@@ -75,7 +75,7 @@ button.action {
   text-decoration: underline;
 }
 button.action.disabled {
-  color: gray(50);
+  color: #7f7f7f;
   cursor: inherit;
 }
 #loading {
