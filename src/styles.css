@@ -53,6 +53,7 @@ li.post {
 li.post q {
   font-size: var(--body-text-size);
   padding-bottom: 2px;
+  overflow-wrap: break-word;
 }
 li.post .info {
   font-size: var(--small-text-size);
