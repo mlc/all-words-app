@@ -6,7 +6,8 @@
   "license": "MIT",
   "scripts": {
     "build": "rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript",
-    "lint": "eslint src && tsc --noEmit"
+    "lint": "eslint src && tsc --noEmit",
+    "prepare": "husky install"
   },
   "dependencies": {
     "clsx": "1.1.1",
@@ -31,7 +32,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.30.0",
     "eslint-plugin-react-hooks": "^4.5.0",
-    "husky": "^4.3.8",
+    "husky": "^8.0.0",
     "lint-staged": "^12.4.2",
     "postcss": "^8.4.14",
     "postcss-preset-env": "^7.6.0",
@@ -42,11 +43,6 @@
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-terser": "^7.0.2",
     "typescript": "4.7.2"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown",
