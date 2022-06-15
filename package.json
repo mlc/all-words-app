@@ -11,18 +11,18 @@
   },
   "dependencies": {
     "clsx": "1.1.1",
-    "preact": "10.7.2",
+    "preact": "10.8.0",
     "tslib": "2.4.0"
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^13.3.0",
     "@rollup/plugin-typescript": "^8.3.2",
     "@types/postcss-preset-env": "^6.7.3",
-    "@typescript-eslint/eslint-plugin": "5.26.0",
-    "@typescript-eslint/parser": "5.26.0",
+    "@typescript-eslint/eslint-plugin": "5.28.0",
+    "@typescript-eslint/parser": "5.28.0",
     "autoprefixer": "^10.4.7",
-    "cssnano": "^5.1.10",
-    "eslint": "^8.16.0",
+    "cssnano": "^5.1.11",
+    "eslint": "8.17.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^17.0.0",
     "eslint-config-prettier": "^8.5.0",
@@ -33,7 +33,7 @@
     "eslint-plugin-react": "^7.30.0",
     "eslint-plugin-react-hooks": "^4.5.0",
     "husky": "^8.0.1",
-    "lint-staged": "^12.4.2",
+    "lint-staged": "^13.0.1",
     "postcss": "^8.4.14",
     "postcss-preset-env": "^7.6.0",
     "prettier": "^2.6.2",
@@ -42,7 +42,7 @@
     "rollup-plugin-html-minifier": "^2.0.0",
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-terser": "^7.0.2",
-    "typescript": "4.7.2"
+    "typescript": "4.7.3"
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown",
