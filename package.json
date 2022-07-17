@@ -10,7 +10,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "clsx": "1.1.1",
+    "clsx": "1.2.1",
     "preact": "10.10.0",
     "tslib": "2.4.0"
   },
