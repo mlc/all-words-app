@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "clsx": "1.1.1",
-    "preact": "10.7.2",
+    "preact": "10.10.0",
     "tslib": "2.4.0"
   },
   "devDependencies": {
@@ -19,7 +19,7 @@
     "@rollup/plugin-typescript": "^8.3.2",
     "@types/postcss-preset-env": "^6.7.3",
     "@typescript-eslint/eslint-plugin": "5.28.0",
-    "@typescript-eslint/parser": "5.28.0",
+    "@typescript-eslint/parser": "5.30.6",
     "autoprefixer": "^10.4.7",
     "cssnano": "^5.1.11",
     "eslint": "8.17.0",
