@@ -18,11 +18,11 @@
     "@rollup/plugin-node-resolve": "^13.3.0",
     "@rollup/plugin-typescript": "^8.3.4",
     "@types/postcss-preset-env": "^7.7.0",
-    "@typescript-eslint/eslint-plugin": "5.33.0",
-    "@typescript-eslint/parser": "5.33.0",
+    "@typescript-eslint/eslint-plugin": "5.35.1",
+    "@typescript-eslint/parser": "5.35.1",
     "autoprefixer": "^10.4.8",
     "cssnano": "^5.1.13",
-    "eslint": "8.21.0",
+    "eslint": "8.23.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^17.0.0",
     "eslint-config-prettier": "^8.5.0",
@@ -42,7 +42,7 @@
     "rollup-plugin-html-minifier": "^2.0.0",
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-terser": "^7.0.2",
-    "typescript": "4.7.4"
+    "typescript": "4.8.2"
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown",
