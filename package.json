@@ -19,7 +19,7 @@
     "@rollup/plugin-typescript": "8.4.0",
     "@types/postcss-preset-env": "^7.7.0",
     "@typescript-eslint/eslint-plugin": "5.35.1",
-    "@typescript-eslint/parser": "5.35.1",
+    "@typescript-eslint/parser": "5.36.1",
     "autoprefixer": "^10.4.8",
     "cssnano": "^5.1.13",
     "eslint": "8.23.0",
