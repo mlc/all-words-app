@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "clsx": "1.2.1",
-    "preact": "10.10.6",
+    "preact": "10.11.0",
     "tslib": "2.4.0"
   },
   "devDependencies": {
