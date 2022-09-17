@@ -15,10 +15,10 @@
     "tslib": "2.4.0"
   },
   "devDependencies": {
-    "@rollup/plugin-node-resolve": "^14.0.1",
+    "@rollup/plugin-node-resolve": "^14.1.0",
     "@rollup/plugin-typescript": "8.5.0",
     "@types/postcss-preset-env": "^7.7.0",
-    "@typescript-eslint/eslint-plugin": "5.36.2",
+    "@typescript-eslint/eslint-plugin": "5.37.0",
     "@typescript-eslint/parser": "5.36.2",
     "autoprefixer": "^10.4.9",
     "cssnano": "^5.1.13",
