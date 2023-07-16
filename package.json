@@ -11,8 +11,8 @@
   },
   "dependencies": {
     "clsx": "2.0.0",
-    "preact": "10.15.1",
-    "tslib": "2.5.3"
+    "preact": "10.16.0",
+    "tslib": "2.6.0"
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "15.1.0",
