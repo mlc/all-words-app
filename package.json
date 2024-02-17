@@ -19,7 +19,7 @@
     "@rollup/plugin-typescript": "11.1.5",
     "@typescript-eslint/eslint-plugin": "7.0.1",
     "@typescript-eslint/parser": "7.0.1",
-    "@types/node": "18.19.4",
+    "@types/node": "20.11.19",
     "autoprefixer": "10.4.16",
     "cssnano": "5.1.15",
     "eslint": "8.56.0",
