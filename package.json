@@ -16,10 +16,11 @@
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "15.2.3",
+    "@rollup/plugin-terser": "0.1.0",
     "@rollup/plugin-typescript": "11.1.6",
+    "@types/node": "20.14.2",
     "@typescript-eslint/eslint-plugin": "7.13.0",
     "@typescript-eslint/parser": "7.13.0",
-    "@types/node": "20.14.2",
     "autoprefixer": "10.4.19",
     "cssnano": "5.1.15",
     "eslint": "8.57.0",
@@ -41,7 +42,6 @@
     "rollup-plugin-emit-ejs": "3.1.0",
     "rollup-plugin-html-minifier": "2.0.0",
     "rollup-plugin-postcss": "4.0.2",
-    "@rollup/plugin-terser": "0.1.0",
     "typescript": "5.4.5"
   },
   "lint-staged": {
@@ -54,5 +54,6 @@
     "not dead",
     "firefox ESR",
     "not safari 8"
-  ]
+  ],
+  "packageManager": "yarn@4.3.0"
 }
