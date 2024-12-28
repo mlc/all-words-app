@@ -1155,13 +1155,13 @@ __metadata:
     lint-staged: "npm:15.2.5"
     postcss: "npm:8.4.38"
     postcss-preset-env: "npm:9.5.14"
-    preact: "npm:10.22.0"
+    preact: "npm:10.25.4"
     prettier: "npm:3.3.1"
     rollup: "npm:4.18.0"
     rollup-plugin-emit-ejs: "npm:3.1.0"
     rollup-plugin-html-minifier: "npm:2.0.0"
     rollup-plugin-postcss: "npm:4.0.2"
-    tslib: "npm:2.6.3"
+    tslib: "npm:2.8.1"
     typescript: "npm:5.4.5"
   languageName: unknown
   linkType: soft
@@ -5195,10 +5195,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"preact@npm:10.22.0":
-  version: 10.22.0
-  resolution: "preact@npm:10.22.0"
-  checksum: 10c0/dc5466c5968c56997e917580c00983cec2f6486a89ea9ba29f1bb88dcfd2f9ff67c8d561a69a1b3acdab17f2bb36b311fef0c348b62e89c332d00c674f7871f0
+"preact@npm:10.25.4":
+  version: 10.25.4
+  resolution: "preact@npm:10.25.4"
+  checksum: 10c0/33a009d614d2b47df1c867935fe057c1dfd2bae1aaab41d6e981434b761f75b88e82eac7847ae486b4dbcffc74af814b8dc59ccef17b10625e3effefa2e1ef67
   languageName: node
   linkType: hard
 
@@ -6102,10 +6102,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:2.6.3, tslib@npm:^2.6.2":
-  version: 2.6.3
-  resolution: "tslib@npm:2.6.3"
-  checksum: 10c0/2598aef53d9dbe711af75522464b2104724d6467b26a60f2bdac8297d2b5f1f6b86a71f61717384aa8fd897240467aaa7bcc36a0700a0faf751293d1331db39a
+"tslib@npm:2.8.1, tslib@npm:^2.6.2":
+  version: 2.8.1
+  resolution: "tslib@npm:2.8.1"
+  checksum: 10c0/9c4759110a19c53f992d9aae23aac5ced636e99887b51b9e61def52611732872ff7668757d4e4c61f19691e36f4da981cd9485e869b4a7408d689f6bf1f14e62
   languageName: node
   linkType: hard
 
