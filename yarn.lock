@@ -1194,7 +1194,7 @@ __metadata:
     lint-staged: "npm:15.5.1"
     postcss: "npm:8.5.3"
     postcss-preset-env: "npm:9.6.0"
-    preact: "npm:10.26.5"
+    preact: "npm:10.26.9"
     prettier: "npm:3.5.3"
     rollup: "npm:4.40.0"
     rollup-plugin-emit-ejs: "npm:3.1.0"
@@ -5277,10 +5277,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"preact@npm:10.26.5":
-  version: 10.26.5
-  resolution: "preact@npm:10.26.5"
-  checksum: 10c0/542a924009489c21b24e9588a5580dac03239a60951d10e6ad1207db66c8e719e1d46a38af6577c8f324b238fbe2aa92e0ffc04d3a71dbe182f56426c8abe632
+"preact@npm:10.26.9":
+  version: 10.26.9
+  resolution: "preact@npm:10.26.9"
+  checksum: 10c0/15f187e3278ae749b70e887f88bb01be63ebcc2eea46ffa86be69180716db40b8b4304e9768767fd68a5910ef5fd1f9ea6389e17cd25e950be76574d568e8fc3
   languageName: node
   linkType: hard
 
